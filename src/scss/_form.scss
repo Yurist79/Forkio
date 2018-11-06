@@ -1,0 +1,162 @@
+@media (min-width: 320px) {
+  .form {
+    @include flexRow-style;
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 326px;
+    &-container {
+      @include flexColon-style;
+      height: 100%;
+    }
+    .container {
+      &__legendMob {
+        font-family: Montserrat;
+        color: #323232;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 34px;
+        text-align: center;
+        margin-bottom: 35px;
+        width: 225px;
+      }
+
+      &__legenddesk {
+        display: none;
+      }
+
+      &__input {
+        outline: none;
+        border: none;
+        border-radius: 21px;
+        background-color: #ffffff;
+        width: 290px;
+        height: 42px;
+        font-family: Montserrat;
+        color: #000;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: left;
+        margin-bottom: 15px;
+        padding-left: 25px;
+      }
+
+      &__button {
+        border-radius: 21px;
+        border: 1px solid $violet;
+        outline: none;
+        cursor: pointer;
+        background-color: $violet;
+        width: 140px;
+        height: 42px;
+        font-family: Montserrat;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 40px;
+        margin-top: 10px;
+      }
+      &__button:hover {
+        background-color: #ffffff;
+        color: $violet;
+      }
+    }
+  }
+}
+@media (min-width: 401px) {
+  .form {
+    &-container {
+      justify-content: flex-start;
+    }
+    .container {
+      &__legendMob {
+        font-size: 28px;
+        width: 392px;
+        margin: 50px 0 50px;
+      }
+
+      &__legenddesk {
+        display: none;
+      }
+
+      &__input {
+        padding-left: 30px;
+        margin-bottom: 14px;
+      }
+
+      &__button {
+        margin-top: 0;
+      }
+    }
+  }
+}
+@media (min-width: 481px) {
+  .form {
+    height: 220px;
+    &-container {
+      @include flexRow-style;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .container {
+      &__legendMob {
+        display: none;
+      }
+
+      &__legenddesk {
+        display: inline;
+        font-family: Montserrat;
+        color: #635c73;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        width: 100%;
+      }
+
+      &__input {
+        width: 40%;
+        max-width: 335px;
+        padding-left: 30px;
+        margin-bottom: 0;
+      }
+
+      &__button {
+        margin-top: 0;
+        display: block;
+        margin: 0 30vw 32px 30vw;
+      }
+    }
+  }
+}
+@media (min-width: 993px) {
+  .form {
+    height: 134px;
+    &-container {
+      @include flexRow-style;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    .container {
+      &__legendMob {
+      }
+
+      &__legenddesk {
+        text-align: left;
+        width: 27%;
+      }
+
+      &__input {
+        width: 25%;
+        max-width: 335px;
+        padding-left: 30px;
+        margin: 0 20px 0 0;
+      }
+
+      &__button {
+        margin-top: 0;
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+}

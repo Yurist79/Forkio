@@ -1,0 +1,293 @@
+@media (min-width: 320px) {
+  .header {
+    @include flexRow-style;
+    height: 103px;
+    width: 100%;
+    background-color: #262626;
+
+    .header-container {
+      @include flexRow-style;
+      justify-content: space-between;
+      height: 101%;
+      width: 100%;
+
+      .logoBlok {
+        @include flexRow-style;
+        flex-wrap: nowrap;
+        cursor: pointer;
+
+        &__icon {
+          width: 43px;
+          height: 41px;
+          background-image: url("./img/Shape 1.png");
+        }
+
+        &__logo {
+          display: none;
+          font-family: Lato;
+          color: $violet;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 16px;
+          margin-left: 20px;
+        }
+      }
+
+      .logoBlok:hover .logoBlok__logo {
+        color: #ffffff;
+      }
+
+      .logoBlok:hover .logoBlok__icon {
+        background-image: url("./img/Shape 2.png");
+      }
+
+      .navbar {
+        z-index: +1;
+        display: none;
+        position: absolute;
+        top: 103px;
+        left: 0;
+        width: 100%;
+        height: 545px;
+        background-color: #303030;
+
+        &-list {
+          width: 100%;
+
+          &-item {
+            @include flexRow-style;
+            height: 105px;
+            width: 100%;
+            border-bottom: 3px solid #3b3b3b;
+
+            &__a {
+              border-left: 3px solid #303030;
+              padding-left: 35px;
+              line-height: 45px;
+              display: inline;
+              font-family: Montserrat;
+              color: #ffffff;
+              font-size: 32.01px;
+              font-weight: 400;
+              width: 100%;
+              height: 55px;
+            }
+
+            &__a:hover {
+              color: #8d81ac;
+              border-left: 3px solid $violet;
+            }
+          }
+        }
+      }
+
+      .button {
+        text-align: center;
+        background-color: $violet;
+        outline: none;
+        border: 1px solid $violet;
+        border-radius: 20px;
+        width: 119px;
+        height: 37px;
+        font-family: Montserrat;
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 15px;
+        text-decoration: none;
+        color: #ffffff;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #ffffff;
+        color: $violet;
+      }
+      .burger {
+        width: 26px;
+        height: 21px;
+        // иконка вместо гамбургера
+        .fas {
+          width: 26px;
+          height: 21px;
+          color: #fff;
+          font-size: 28px;
+          display: none;
+          cursor: pointer;
+          font-weight: 700;
+        }
+
+        &__icon {
+          display: inline;
+          width: 26px;
+          height: 21px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 401px) {
+  .header {
+    .header-container {
+      .logoBlok {
+        &__icon {
+        }
+
+        &__logo {
+          display: inline;
+        }
+      }
+
+      .navbar {
+        &-list {
+          &-item {
+            &__a {
+            }
+
+            &__a:hover {
+            }
+          }
+        }
+      }
+
+      .button {
+        width: 130px;
+        height: 44px;
+        line-height: 15px;
+        font-size: 17px;
+        font-weight: 700;
+        border-radius: 50vh;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  .header {
+    height: 120px;
+
+    .header-container {
+      padding-bottom: 30px;
+      .logoBlok {
+        &__logo {
+        }
+      }
+
+      .navbar {
+        @include flexRow-style;
+        flex-wrap: nowrap;
+        height: auto;
+        background-color: inherit;
+        width: 100%;
+        height: 30px;
+        top: 80px;
+
+        &-list {
+          @include flexRow-style;
+          justify-content: space-around;
+          width: 90%;
+
+          &-item {
+            @include flexRow-style;
+            height: auto;
+            width: auto;
+            border-bottom: 0;
+            
+
+            &__a {
+              padding-left: 0;
+              line-height: 45px;
+              display: flex;
+              flex-wrap: nowrap;
+              flex-direction: row;
+              color: #8d81ac;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 15px;
+              width: auto;
+              height: auto;
+              border-left: none;
+              margin: 0 5px;
+            }
+
+            &__a:hover {
+              color: #ffffff;
+              border-left: none;
+            }
+          }
+
+          &-item_title {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .button {
+      min-width: 145px;
+      font-size: 16px;
+    }
+
+    .button:hover {
+    }
+    .burger {display: none;
+      .fas {
+        display: none;
+      }
+
+      &__icon {
+        
+      }
+    }
+  }
+}
+
+@media (min-width: 993px) {
+  .header {
+    height: 100px;
+
+    .header-container {
+      padding-bottom: 0;
+      align-items: center;
+      padding-top: 0;
+
+      .logoBlok {
+        margin-top: 0;
+        &__logo {}
+      }
+
+      .navbar {
+        position: static;
+        top: inherit;
+        @include flexRow-style;
+
+        &-list {
+          @include flexRow-style;
+          justify-content: flex-end;
+          width: 100%;
+
+          &-item {
+            @include flexRow-style;
+            height: auto;
+            width: auto;
+            border-bottom: 0;
+
+            &__a {
+              margin: 0 24px;
+            }
+          }
+
+          &-item_title {
+            display: none;
+          }
+        }
+      }
+    }
+    .button {
+      min-width: 145px;
+      font-size: 16px;
+    }
+  }
+}

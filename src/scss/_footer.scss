@@ -1,0 +1,387 @@
+
+
+@media (min-width: 320px) {
+
+    .footer {
+     @include flexRow-style;
+    width: 100%;
+        &-container{
+            .logoGrup {
+                width: 100%;
+                margin-top: 40px;
+
+                &-fule {
+                    @include flexRow-style;
+                    justify-content: flex-start;
+
+                    &__icon {
+                        display: none;
+                        width: 43px;
+                        height: 41px;
+                        background-image: url('./img/Shape 1.png');
+                    }
+
+                    &__logo {
+                        display: inline-block;
+                        font-family: Montserrat;
+                        color: #333333;
+                        font-size: 24px;
+                        font-weight: 400;
+                        line-height: 16px;
+
+                        &_grey {
+                            font-family: Montserrat;
+                            color: #8d81ac;
+                            font-size: 24px;
+                            font-weight: 400;
+                            line-height: 16px;
+                        }
+                    }
+                }
+
+                &__line {
+                    z-index: -1;
+                    display: none;
+                }
+
+                &-fule:hover .logoGrup-fule__icon {
+                    background-image: url('./img/Shape 3.png');
+                }
+
+                &-fule:hover .logoGrup-fule__logo {
+                    color: #8d81ac;
+                }
+
+                &-fule:hover .logoGrup-fule__logo_grey {
+                    color: #333333;
+                }
+
+                &__content {
+                    width: 260px;
+                    font-family: Montserrat;
+                    color: #848e97;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 21px;
+                    margin-top: 35px;
+                }
+            }
+
+            .navbar {
+                margin-top: 35px;
+
+                &__name {
+                    font-family: Montserrat;
+                    color: #323232;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 28px;
+                }
+
+                &-list-item {
+                    list-style: none;
+
+                    &__a {
+                        font-family: Montserrat;
+                        color: #8d81ac;
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 23px;
+                    }
+
+                    &__a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+
+            .contacts {
+                @include flexColon-style;
+                align-items: flex-start;
+                margin-top: 35px;
+
+
+                &__phon {
+                    font-family: Montserrat;
+                    color: #31384d;
+                    font-size: 30px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+
+                &__time {
+                    font-family: Montserrat;
+                    color: #848e97;
+                    font-size: 12px;
+                    font-weight: 400;
+
+                }
+
+                &__city {
+                    font-family: Montserrat;
+                    color: #323232;
+                    font-size: 16px;
+                    font-weight: 400;
+                    margin: 35px 0 20px;
+                }
+
+                &__adres {
+                    font-family: Montserrat;
+                    color: #848e97;
+                    font-size: 14px;
+                    font-weight: 400;
+                    width: 220px;
+                }
+            }
+
+            .info {
+                margin-top: 35px;
+                margin-bottom: 50px;
+
+
+
+                &__logo {
+                    font-family: Montserrat;
+                    color: #323232;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 28px;
+                    margin-bottom: 25px;
+                    width:100px;
+                    cursor: pointer;
+                }
+                &__logo:hover {
+                    padding-left:30px;
+                }
+
+                &__cont {
+
+                    font-family: Montserrat;
+                    color: #848e97;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 23px;
+                    width: 245px;
+                }
+
+            }
+        }
+    }
+}
+
+@media (min-width: 401px) {
+    .footer {
+        &-container{
+            .logoGrup {
+                margin-top: 26px;
+
+                &-fule {
+
+                    &__icon {
+                        display: inline;
+                    }
+
+                    &__logo {
+                        margin-left: 20px;
+
+                        &_grey {}
+                    }
+                }
+
+                &__line {
+                    display: flex;
+                    position: relative;
+                    left: 10px;
+                    top: 8px;
+                    border: 1px solid #f4f4f4;
+                }
+
+                &__content {
+                    margin-top: 22px;
+                }
+            }
+
+            .navbar {
+                &__name {}
+
+                &-list-item {
+                    list-style: none;
+
+                    &__a {}
+
+                    &__a:hover {}
+                }
+            }
+
+            .contacts {
+                &__phon {}
+
+                &__time {}
+
+                &__city {}
+
+                &__adres {
+                    width: 220px;
+                }
+            }
+
+            .info {
+                &__logo {}
+
+                &__cont {
+                    width: 97%;
+                    max-width: 410px;
+                }
+            }
+        }
+    }
+}
+@media (min-width: 481px) {
+    .footer {
+        &-container {
+            @include flexRow-style;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 0;
+
+            .logoGrup {
+                @include footerBlok;
+                margin-top: 29px;
+
+                &-fule {
+                    &__icon {}
+
+                    &__logo {
+                        margin-left: 20px;
+
+                        &_grey {}
+                    }
+                }
+
+                &__line {
+                    display: none;
+                }
+
+                &__content {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+            }
+
+            .navbar {
+                @include footerBlok;
+
+                &__name {}
+
+                &-list-item {
+                    list-style: none;
+
+                    &__a {}
+
+                    &__a:hover {}
+                }
+            }
+
+            .contacts {
+                margin-top: 0;
+                margin-bottom: 40px;
+                @include footerBlok;
+
+                &__phon {}
+
+                &__time {}
+
+                &__city {
+                    margin: 40px 0 20px;
+                }
+
+                &__adres {
+                    width: 220px;
+                }
+            }
+
+            .info {
+                @include footerBlok;
+                margin: 0;
+
+                &__logo {}
+
+                &__cont {}
+            }
+        }
+    }
+}
+
+
+@media (min-width: 993px) {
+    .footer {
+        &-container {
+
+            .logoGrup {
+                @include footerBlokdesc;
+                margin-top: 62px;
+                
+                &-fule {
+
+                    &__icon {}
+
+                    &__logo {
+
+                        &_grey {}
+                    }
+                }
+
+                &__line {
+                    display: none;
+
+                }
+
+                &__content {
+                    width: 100%;
+                    margin-top: 20px;
+                }
+            }
+
+            .navbar {
+                @include footerBlokdesc;
+                
+                &__name {}
+
+                &-list-item {
+                    &__a {}
+
+                    &__a:hover {}
+                }
+            }
+
+            .contacts {
+                @include footerBlokdesc;
+                margin-right: 15px;
+                margin-bottom: 30px;
+
+                &__phon {}
+
+                &__time {}
+
+                &__city {
+                    margin: 40px 0 20px;
+                }
+
+                &__adres {
+                    width: 220px;
+                }
+            }
+
+            .info {
+                @include footerBlokdesc;
+
+                &__logo {}
+
+                &__cont {}
+
+            }
+        }
+    }
+}

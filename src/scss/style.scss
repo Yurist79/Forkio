@@ -1,0 +1,79 @@
+* {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html {
+    }
+
+
+body {
+     
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.container {
+   box-sizing: border-box;
+   width:100%;
+    max-width: 1200px;
+    padding: 0 10px;
+}
+
+$violet:#8d81ac;
+
+@mixin flexRow-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+@mixin flexColon-style {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin footerBlok {
+    width: 48%;
+    max-width: 332px;
+    height: 200px;
+    @include flexColon-style;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+@mixin footerBlokdesc {
+    width: auto;
+    min-width: 133px;
+    max-width: 302px;
+    height: 225px;
+    margin-top: 65px;
+    @include flexColon-style;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+@media (max-width:319px) {
+    * {
+        display: none;
+    }
+}
+
+@import "header.scss";
+@import "homePage.scss";
+@import "features.scss";
+@import "slider.scss";
+@import "aside.scss";
+@import "pricing.scss";
+@import "present.scss";
+@import "form.scss";
+@import "footer.scss";
+
+
+
